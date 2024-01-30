@@ -1,0 +1,11 @@
+{% extends "users/base.html" %} 
+{% block content %}
+<!-- The message attribute specifies how to send the form data (post/ get)  -->
+<form method="post" novalidate>
+  {% csrf_token %}
+  <h2>SignUp</h2>
+  {{form.as_p}}
+  <input type="submit" value="Register" />
+  <p>Have an account? Login <a href="/users/login">Here</a></p>
+</form>
+{% endblock content %}
